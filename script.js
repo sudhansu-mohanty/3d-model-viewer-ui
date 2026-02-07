@@ -1,17 +1,18 @@
 // Render mode toggle
-document.querySelectorAll(".render-modes button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        document.querySelectorAll(".render-modes button")
+document.querySelectorAll(".render-modes button").forEach(button => {
+    button.addEventListener("click", () => {
+        document
+            .querySelectorAll(".render-modes button")
             .forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+        button.classList.add("active");
     });
 });
 
 // Theme toggle
-const toggle = document.getElementById("themeToggle");
-toggle.addEventListener("click", () => {
+const themeToggle = document.getElementById("themeToggle");
+
+themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("light");
-    toggle.textContent =
+    themeToggle.textContent =
         document.body.classList.contains("light") ? "☀️" : "🌙";
 });
-
