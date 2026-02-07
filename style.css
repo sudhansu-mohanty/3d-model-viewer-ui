@@ -1,0 +1,116 @@
+:root {
+  --bg: #111;
+  --panel: #1c1c1c;
+  --text: #eaeaea;
+  --accent: #4caf50;
+}
+
+body.light {
+  --bg: #f4f4f4;
+  --panel: #ffffff;
+  --text: #111;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid #333;
+}
+
+.top-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+button {
+  background: #333;
+  color: var(--text);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active {
+  background: var(--accent);
+  color: #000;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  height: calc(100vh - 56px);
+}
+
+.sidebar {
+  background: var(--panel);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.viewport {
+  padding: 16px;
+}
+
+.canvas {
+  height: 100%;
+  border: 2px dashed #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+
+.progress {
+  background: #333;
+  height: 6px;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 60%;
+  height: 100%;
+  background: var(--accent);
+}
+
+.performance {
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.performance.good {
+  background: #2e7d32;
+}
+
+.light {
+  margin-bottom: 20px;
+}
+
+.reset {
+  margin-top: 6px;
+}
+
+.viewport-toggles {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--panel);
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  gap: 12px;
+}
