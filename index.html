@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D Model Viewer – UI/UX Prototype</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>3D Model Viewer</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="dark">
 
-    <!-- Top Bar -->
+    <!-- TOP BAR -->
     <header class="top-bar">
         <h1>3D Model Viewer</h1>
 
@@ -34,45 +34,54 @@
         </div>
     </header>
 
+    <!-- MAIN APP -->
     <div class="app">
 
-        <!-- Left Sidebar -->
+        <!-- LEFT SIDEBAR -->
         <aside class="sidebar left">
-            <h2>Model Upload</h2>
-            <button class="upload-btn">Upload Model</button>
-            <p class="formats">.glb · .gltf · .obj · .fbx</p>
+            <section>
+                <h2>Model Upload</h2>
+                <button class="upload-btn">Upload Model</button>
+                <p class="formats">.glb · .gltf · .obj · .fbx</p>
 
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </section>
 
-            <h3>Model Info</h3>
-            <ul class="stats">
-                <li>Vertices: 24,500</li>
-                <li>Triangles: 15,000</li>
-                <li>Meshes: 3</li>
-                <li>Materials: 2</li>
-                <li>Dimensions: 1.2 × 2.1 × 0.8</li>
-            </ul>
+            <section>
+                <h2>Model Info</h2>
+                <ul class="stats">
+                    <li>Vertices: 24,500</li>
+                    <li>Triangles: 15,000</li>
+                    <li>Meshes: 3</li>
+                    <li>Materials: 2</li>
+                    <li>Dimensions: 1.2 × 2.1 × 0.8</li>
+                </ul>
+            </section>
 
-            <h3>Performance</h3>
-            <div class="performance good">
-                <span>Score: 82</span>
-                <small>Good Performance</small>
-            </div>
-            <ul class="metrics">
-                <li>File Size: 2.5 MB</li>
-                <li>Texture Memory: 8 MB</li>
-                <li>Triangle Count: 15,000</li>
-            </ul>
-            <p class="tip">💡 Reduce texture size to improve performance.</p>
+            <section>
+                <h2>Performance</h2>
+                <div class="performance good">
+                    <strong>Score: 82</strong>
+                    <span>Good Performance</span>
+                </div>
+
+                <ul class="metrics">
+                    <li>File Size: 2.5 MB</li>
+                    <li>Texture Memory: 8 MB</li>
+                    <li>Triangle Count: 15,000</li>
+                </ul>
+
+                <p class="tip">💡 Reduce texture size to improve performance.</p>
+            </section>
         </aside>
 
-        <!-- Main Viewport -->
+        <!-- VIEWPORT -->
         <main class="viewport">
             <div class="canvas">
-                <p>3D Viewport</p>
-                <small>Drag to rotate · Scroll to zoom · Right-drag to pan</small>
+                <h2>3D Viewport</h2>
+                <p>Drag to rotate · Scroll to zoom · Right-drag to pan</p>
             </div>
 
             <div class="viewport-toggles">
@@ -81,31 +90,33 @@
             </div>
         </main>
 
-        <!-- Right Sidebar -->
+        <!-- RIGHT SIDEBAR -->
         <aside class="sidebar right">
-            <h2>Lighting</h2>
-
-            <div class="light">
-                <h3>Main Light</h3>
-                <label>Intensity
+            <section class="light">
+                <h2>Main Light</h2>
+                <label>
+                    Intensity
                     <input type="range" min="0" max="100" value="70" />
                 </label>
-                <label>Color
+                <label>
+                    Color
                     <input type="color" value="#ffffff" />
                 </label>
                 <button class="reset">Reset</button>
-            </div>
+            </section>
 
-            <div class="light">
-                <h3>Ambient Light</h3>
-                <label>Intensity
+            <section class="light">
+                <h2>Ambient Light</h2>
+                <label>
+                    Intensity
                     <input type="range" min="0" max="100" value="30" />
                 </label>
-                <label>Color
+                <label>
+                    Color
                     <input type="color" value="#cccccc" />
                 </label>
                 <button class="reset">Reset</button>
-            </div>
+            </section>
         </aside>
 
     </div>
